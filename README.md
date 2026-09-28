@@ -1,0 +1,1 @@
+# Separate-Shortcut-Palettes
