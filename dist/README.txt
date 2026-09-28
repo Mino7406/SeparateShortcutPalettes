@@ -19,17 +19,19 @@ REQUIREMENTS
 - REFramework (Monster Hunter Wilds build)
 
 INSTALLATION
-1. Copy the "reframework" folder into your game folder
-   (steamapps\common\MonsterHunterWilds), merging with the existing one.
-   The result should be: MonsterHunterWilds\reframework\autorun\SeparateShortcutPalettes.lua
-2. Start the game and load a character.
-3. Press Insert (REFramework menu) -> Script Generated UI -> "Separate Shortcut Palettes".
+Copy the "reframework" folder into your game folder (steamapps\common\MonsterHunterWilds),
+merging with the existing one. The result should be:
+  MonsterHunterWilds\reframework\autorun\SeparateShortcutPalettes.lua
+Nothing to run and no runtime to install: the file loads automatically when the game starts.
+
+HOW TO USE (IN GAME)
+1. Start the game and load a character.
+2. Press Insert (REFramework menu) -> Script Generated UI -> "Separate Shortcut Palettes".
    The status line should turn green: "Active: Gamepad palettes".
 
-FIRST RUN
-Both devices start with your current palettes. Edit the palettes with one device,
-then press a button on the other device - its palettes will be the ones you had
-before, and edits there no longer touch the first device.
+On the first run both devices start with your current palettes. Edit the palettes with one
+device, then press a button on the other device - its palettes will be the ones you had
+before, and edits there no longer affect the first device.
 
 MENU
 - Enabled: turn the mod on/off. Off freezes the palettes as they are.
@@ -66,7 +68,7 @@ KNOWN LIMITATIONS
   and pauses until you put at least one item back.
 - Going back from keyboard to gamepad needs a gamepad BUTTON press; moving only the
   stick does not switch.
-- If you switch device while the palette editing screen is open, the palettes change
+- If you switch devices while the palette editing screen is open, the palettes change
   at that moment; the on-screen list may only refresh when you reopen it.
 - Keyboard detection uses global key state, so a new key press while the game window is
   not focused (e.g. typing in another app) can also switch to the keyboard palettes.

@@ -6,30 +6,31 @@ Gives **Monster Hunter Wilds** a separate set of shortcut palettes for the keybo
 
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=flat-square&logo=windows&logoColor=white)]()
 [![REFramework](https://img.shields.io/badge/REFramework-lua-5865F2?style=flat-square)](https://github.com/praydog/REFramework)
+[![Nexus Mods](https://img.shields.io/badge/Nexus%20Mods-download-D98F40?style=flat-square)](https://www.nexusmods.com/monsterhunterwilds/mods/4991)
 [![License: MIT](https://img.shields.io/badge/license-MIT-4c1?style=flat-square)](LICENSE)
 ![language](https://img.shields.io/badge/docs-EN%20%7C%20KR-blue?style=flat-square)
 
-*[한글 설명 보기](README.ko.md)*
+*[한글 설명 보기](README.ko.md) · [Nexus Mods page](https://www.nexusmods.com/monsterhunterwilds/mods/4991)*
 
 </div>
 
 ## The problem
 
-Wilds keeps **one** set of shortcut palettes and both input methods read and write it. Rearrange a palette with the gamepad and the keyboard's palette changes too, and the other way around. If you switch between the two, you keep undoing your own layout.
+Wilds keeps **one** set of shortcut palettes, shared by the keyboard and the gamepad. Rearrange a palette with the gamepad and the keyboard gets the change too, and the other way around. If you switch between the two, you keep undoing your own layout.
 
 ---
 
 ## What this does
 
-It keeps two copies — one for the gamepad, one for the keyboard — and swaps them into the game as you change what you are playing with. Press a gamepad button and you get your gamepad palettes; press a keyboard key and you get your keyboard palettes. Edits made with one device never touch the other.
+It keeps two copies, one for the gamepad and one for the keyboard, and swaps them into the game as you switch between devices. Press a gamepad button and the gamepad palettes are loaded; press a keyboard key and the keyboard palettes are loaded. Edits made on one device never affect the other.
 
-Everything the palettes hold is separated: the items, the palette names and their icons. Each hunter has their own two sets.
+Everything a palette holds is kept separate: the items, the palette names and their icons. Each hunter has their own two sets.
 
 ---
 
 ## Install
 
-Grab a release from the [GitHub releases](../../releases) and extract it into your Monster Hunter Wilds folder so you end up with:
+Grab a release from [Nexus Mods](https://www.nexusmods.com/monsterhunterwilds/mods/4991) or the [GitHub releases](../../releases) and extract it into your Monster Hunter Wilds folder so you end up with:
 
 ```
 MonsterHunterWilds/
@@ -38,10 +39,14 @@ MonsterHunterWilds/
       └─ SeparateShortcutPalettes.lua
 ```
 
-Start the game, load a character, press **Insert** and open **Script Generated UI → Separate Shortcut Palettes**. The status line should turn green: `Active: Gamepad palettes`.
-
 > [!NOTE]
-> Requires [REFramework](https://github.com/praydog/REFramework). Nothing to run, no runtime to install — the file loads automatically when the game starts.
+> Requires [REFramework](https://github.com/praydog/REFramework). Nothing to run and no runtime to install: the file loads automatically when the game starts.
+
+---
+
+## How to use (in game)
+
+Start the game and load a character. Press **Insert** to open the REFramework menu, then open **Script Generated UI → Separate Shortcut Palettes**. The status line should turn green: `Active: Gamepad palettes`.
 
 On the first run both devices start with your current palettes. Change the palettes with one device, press a button on the other, and its palettes are the ones you had before.
 
@@ -96,10 +101,10 @@ In the REFramework menu (Insert), under **Separate Shortcut Palettes**.
 
 - Only the DualSense has been tested. Other controllers should work — detection goes through the engine's own gamepad interface, not a driver — but that is not verified.
 - Going back from the keyboard to the gamepad needs a gamepad **button** press. Moving only the sticks or pulling only the triggers may not switch.
-- Switching device while the palette editing screen is open changes the palettes at that moment; the list on screen may only refresh when you reopen it.
+- Switching devices while the palette editing screen is open changes the palettes at that moment; the list on screen may only refresh when you reopen it.
 - Keyboard detection uses global key state, so a new key press while the game is not focused can also switch to the keyboard palettes.
 - Emptying **all** 96 slots makes the mod pause (it looks like an unloaded save) until you put one item back.
-- Each time a character is loaded the mod writes its stored copy into the game. If you restore an older save or sync from another PC, the mod's copy wins; use *Copy current palettes to both devices* to keep what you see instead.
+- Each time a character is loaded, the mod writes its stored copy into the game. If you restore an older save or sync from another PC, the mod's copy wins; use *Copy current palettes to both devices* to keep what you see instead.
 - A game update that renames the save fields shows *Shortcut palettes not found* in the menu, and the mod does nothing.
 
 ---
